@@ -1587,6 +1587,11 @@ new function() { // Injection scope for various item event handlers
         return this._index;
     },
 
+    /**
+     * Modifiy the index of this
+     *
+     * @param {integer} The new index
+     */
     setIndex: function(index) {
         var parent = this._parent,
             children = parent && parent._children;
