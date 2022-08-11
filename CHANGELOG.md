@@ -1,5 +1,33 @@
 # Change Log
 
+## `0.13.0-canary.0`
+
+### Core changes
+- Add View#fitBounds()[#1689](https://github.com/paperjs/paper.js/pull/1689)
+- Add null check for 2d context in CanvasView [#1860](https://github.com/paperjs/paper.js/pull/1860)
+- Add setter for item.index [#1909](https://github.com/paperjs/paper.js/pull/1909)
+- Allow pointer events to be used if supported [#1810](https://github.com/paperjs/paper.js/pull/1810)
+- Fix detection of Option + Space key on macOS [#1801](https://github.com/paperjs/paper.js/pull/1801)
+- Fix createPath arguments not being passed down to Path constructor [#1988](https://github.com/paperjs/paper.js/pull/1988)
+- Add separate ANGULAR_EPSILON for arcTo()
+- Define Raster#setImageData() to also respect size
+- Rename Raster#setImageData() to #putImageData()
+- Fix Item#rasterize() bounds cache when reusing raster
+
+### Documentation Changes
+- Fix: keyboard events are missing from view documentation [#1804](https://github.com/paperjs/paper.js/pull/1804)
+- Fix indentation in code example
+- Add missing docs for Point.negate() function [#1946](https://github.com/paperjs/paper.js/pull/1946)
+
+### Misc Changes
+- Chore Update devDependencies
+- Fix contributing upstream URL in README.md [#1987](https://github.com/paperjs/paper.js/pull/1987)
+- Fixed a typo in README.md
+- Fix task sequence for docs:typescript
+- Fix type definitions for recent API change
+- Fix test failing on test:phantom
+- Switch back to load.js versions on develop branch
+
 ## `0.12.15`
 
 ### Fixed
