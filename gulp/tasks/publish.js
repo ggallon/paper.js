@@ -31,17 +31,17 @@ var packages = ['paper-jsdom', 'paper-jsdom-canvas'],
     jsonModifierOptions = { indent: 2 };
 
 gulp.task('publish', function(callback) {
-    if (options.branch !== 'develop') {
-        throw new Error('Publishing is only allowed on the develop branch.');
+    if (options.branch !== 'canary') {
+        throw new Error('Publishing is only allowed on the canary branch.');
     }
     // publish:website comes before publish:release, so paperjs.zip file is gone
     // before yarn npm publish:
     run(
         'publish:json',
         'publish:dist',
-        'publish:packages',
+        //'publish:packages',
         'publish:commit',
-        'publish:website',
+        //'publish:website',
         'publish:release',
         'publish:load',
         callback
@@ -49,8 +49,8 @@ gulp.task('publish', function(callback) {
 });
 
 gulp.task('publish:version', function() {
-    // Reset the version value since we're executing this on the develop branch,
-    // but we don't wan the published version suffixed with '-develop'.
+    // Reset the version value since we're executing this on the canary branch,
+    // but we don't wan the published version suffixed with '-canary'.
     options.resetVersion();
     releaseMessage = 'Release version ' + options.version;
 });
@@ -75,9 +75,9 @@ gulp.task('publish:commit', ['publish:version'], function() {
 
 gulp.task('publish:release', function() {
     return gulp.src('.')
-        .pipe(git.checkout('master'))
-        .pipe(git.merge('develop', { args: '-X theirs' }))
-        .pipe(git.push('origin', ['master', 'develop'], { args: '--tags' }))
+        .pipe(git.checkout('main'))
+        .pipe(git.merge('canary', { args: '-X theirs' }))
+        .pipe(git.push('origin', ['main', 'canary'], { args: '--tags' }))
         .pipe(shell('yarn npm publish'));
 });
 
@@ -158,13 +158,13 @@ gulp.task('publish:website:push', ['publish:version'], function() {
         .pipe(git.add(opts))
         .pipe(git.commit(releaseMessage, opts))
         .pipe(git.tag('v' + options.version, releaseMessage, opts))
-        .pipe(git.push('origin', 'master', { args: '--tags', cwd: sitePath }));
+        .pipe(git.push('origin', 'main', { args: '--tags', cwd: sitePath }));
 });
 
 gulp.task('publish:load', ['load'], function() {
     return gulp.src('dist')
-        .pipe(git.checkout('develop'))
+        .pipe(git.checkout('canary'))
         .pipe(git.add())
-        .pipe(git.commit('Switch back to load.js versions on develop branch.'))
-        .pipe(git.push('origin', 'develop'));
+        .pipe(git.commit('Switch back to load.js versions on canary branch.'))
+        .pipe(git.push('origin', 'canary'));
 });

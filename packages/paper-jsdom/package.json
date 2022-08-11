@@ -1,14 +1,14 @@
 {
-  "name": "paper-jsdom",
+  "name": "@ggallon/paper-jsdom",
   "version": "0.12.15",
   "description": "The Swiss Army Knife of Vector Graphics Scripting, packaged for headless use in Node.js",
   "license": "MIT",
   "homepage": "http://paperjs.org",
   "repository": {
     "type": "git",
-    "url": "https://github.com/paperjs/paper-jsdom"
+    "url": "https://github.com/ggallon/paper-jsdom"
   },
-  "bugs": "https://github.com/paperjs/paper.js/issues",
+  "bugs": "https://github.com/ggallon/paper.js/issues",
   "author": "Jürg Lehni <juerg@scratchdisk.com> (http://scratchdisk.com)",
   "main": "index.js",
   "files": [
@@ -19,8 +19,8 @@
     "node": ">=4.0.0"
   },
   "dependencies": {
+    "@ggallon/paper": "0.12.15",
     "jsdom": "^16.5.1",
-    "paper": "0.12.15",
     "source-map-support": "^0.5.19"
   },
   "keywords": [

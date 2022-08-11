@@ -1,14 +1,14 @@
 {
-  "name": "paper",
+  "name": "@ggallon/paper",
   "version": "0.12.15",
   "description": "The Swiss Army Knife of Vector Graphics Scripting",
   "license": "MIT",
   "homepage": "http://paperjs.org",
   "repository": {
     "type": "git",
-    "url": "https://github.com/paperjs/paper.js"
+    "url": "https://github.com/ggallon/paper.js"
   },
-  "bugs": "https://github.com/paperjs/paper.js/issues",
+  "bugs": "https://github.com/ggallon/paper.js/issues",
   "contributors": [
     "Jürg Lehni <juerg@scratchdisk.com> (http://scratchdisk.com)",
     "Jonathan Puckey <jonathan@puckey.studio> (http://studiomoniker.com)"
@@ -114,5 +114,8 @@
     "paper",
     "paper.js",
     "paperjs"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
