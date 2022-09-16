@@ -3,10 +3,11 @@ os: linux
 # Follow https://github.com/nodejs/Release#release-schedule to decide when to remove a version
 node_js:
 - stable
+- 18
+- 17
+- 16
 - 14
-- 13
 - 12
-- 10
 env:
   jobs:
   - CXX=g++-4.9
