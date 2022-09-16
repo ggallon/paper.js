@@ -3,6 +3,7 @@
 ## `0.13.0-canary.0`
 
 ### Core changes
+- Add SVG export option to link images and define them in the defs [#1994](https://github.com/paperjs/paper.js/pull/1994)
 - Add View#fitBounds()[#1689](https://github.com/paperjs/paper.js/pull/1689)
 - Add null check for 2d context in CanvasView [#1860](https://github.com/paperjs/paper.js/pull/1860)
 - Add setter for item.index [#1909](https://github.com/paperjs/paper.js/pull/1909)
@@ -15,11 +16,12 @@
 - Fix Item#rasterize() bounds cache when reusing raster
 
 ### Documentation Changes
-- Fix: keyboard events are missing from view documentation [#1804](https://github.com/paperjs/paper.js/pull/1804)
+- Fix keyboard events are missing from view documentation [#1804](https://github.com/paperjs/paper.js/pull/1804)
 - Fix indentation in code example
 - Add missing docs for Point.negate() function [#1946](https://github.com/paperjs/paper.js/pull/1946)
 
 ### Misc Changes
+- Update travis with last nodes versions
 - Chore Update devDependencies
 - Fix contributing upstream URL in README.md [#1987](https://github.com/paperjs/paper.js/pull/1987)
 - Fixed a typo in README.md
