@@ -16,3 +16,4 @@
 - Samuel Asensi <asensi.samuel@gmail.com>
 - Takahiro Nishino <sapics.dev@gmail.com>
 - Piotr Wilczynski <delwing@gmail.com>
+- Blayze Wilhelm <blayze@carstickers.com>
