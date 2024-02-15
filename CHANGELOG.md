@@ -3,8 +3,9 @@
 ## `0.13.0-canary.0`
 
 ### Core changes
+- Fix transformation in SvgImport [#1927](https://github.com/paperjs/paper.js/pull/1927)
 - Add SVG export option to link images and define them in the defs [#1994](https://github.com/paperjs/paper.js/pull/1994)
-- Add View#fitBounds()[#1689](https://github.com/paperjs/paper.js/pull/1689)
+- Add View#fitBounds() [#1689](https://github.com/paperjs/paper.js/pull/1689)
 - Add null check for 2d context in CanvasView [#1860](https://github.com/paperjs/paper.js/pull/1860)
 - Add setter for item.index [#1909](https://github.com/paperjs/paper.js/pull/1909)
 - Allow pointer events to be used if supported [#1810](https://github.com/paperjs/paper.js/pull/1810)
@@ -40,7 +41,7 @@
 
 ### Fixed
 
-- Fix faulty positioning regression in `Item#rasterize()` (#1905).
+- Fix faulty positioning regression in `Item#rasterize()` [#1905](https://github.com/paperjs/paper.js/pull/1905)
 
 ## `0.12.12`
 
@@ -469,7 +470,7 @@ the fixes and additions from the past two weeks:
 - Fix matrix cloning for groups with `#applyMatrix = false` ( #1225).
 - Correctly handle offset in `Curve#divideAt(offset)` (#1230).
 - Fix issue with `Curve#isStraight()` where handles were checked incorrectly
-  for collinearity (#1269). 
+  for collinearity (#1269).
 - Fix `Line#getSide()` imprecisions when points are on the line.
 - Docs: Fix documentation of `Project#hitTestAll()` (#536).
 - Docs: Improve description of `option.class` value in `Project#hitTest()`
@@ -673,7 +674,7 @@ contribute to the code.
 - Fix calculations of `Item#strokeBounds` for all possible combinations of
   `Item#strokeScaling` and `Item#applyMatrix` for `Path`, `Shape` and
   `SymbolItem`, along with correct handling of such strokes in Item#hitTest()
-  (#697, #856, #1014). 
+  (#697, #856, #1014).
 - Make new code-base unified for Node.js/browser work with module bundlers like
   Webpack (#986).
 - Improve hit-testing and `#contains()` checks on path with horizontal lines
@@ -752,7 +753,7 @@ contribute to the code.
 - Canvas attributes "resize" and "data-paper-resize" no longer cause paper to
   resize the canvas when the viewport size changes; Additional CSS styles are
   required since `0.9.22`, e.g.:
-  
+
   ```css
   /* Scale canvas with resize attribute to full size */
   canvas[resize] {
