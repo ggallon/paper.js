@@ -1,5 +1,35 @@
 # Change Log
 
+## Unreleased
+
+### Fixed
+
+- Fix transformation in SvgImport (#1926).
+
+### Added
+
+- Add setter for item.index (#1908).
+
+## `0.12.17`
+
+- Properly warning in Chrome Console by providing `{ willReadFrequently: true }`
+  canvas context option where needed (#2008).
+
+## `0.12.16`
+
+### Fixed
+
+- Fix `Item#rasterize()` bounds cache when reusing raster.
+- Fix new warning in Chrome Console by providing `{ willReadFrequently: true }`
+  canvas context option where needed (#1999, #2000, #2003).
+- Fix `Path.*` constructor properties handling when passing `{ insert: true }`
+
+### Changed
+
+- Rename `Raster#setImageData()` to `#putImageData()`.
+- Change `Raster#setImageData()` to also respect image size.
+- Add separate `Numerical.ANGULAR_EPSILON` for `Path#arcTo()`
+
 ## `0.12.15`
 
 ### Fixed
